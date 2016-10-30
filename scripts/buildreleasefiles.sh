@@ -1,5 +1,5 @@
 #!/bin/sh
-EXTENSIONS="attic auto bib health-lifesci pending meta"
+EXTENSIONS="attic auto bib health-lifesci pending meta realProperty"
 PWD=`pwd`
 PROG="`basename $0`"
 if [ `basename $PWD` != "schemaorg" ]
