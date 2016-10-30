@@ -5,7 +5,7 @@
 	"schema:name": "Schema.org Hosted Extensions",
     "@graph": [
 		{
-		    "@id": "http://realProperty.schema.org",
+		    "@id": "http://realproperty.schema.org",
 			"schema:name": "Real Property Extension",
 			"schema:disambiguatingDescription": "terms used within schema.org for real property definitions.",
 		    "schema:softwareVersion": "1.0",
