@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:schema="http://schema.org/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en" lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Farm Data Extension</title>
+<style type="text/css">
+      span.h {
+        padding-left: 0px;
+        font-weight: bold;
+      }
+      span {
+        display: block;
+        padding-left: 10px;
+      }
+    </style>
+</head>
+<body>
+<h1>farm extension</h1>
+
+<p>This is an  RDFa representation of the schema.org farm extension.</p>
+
+<p vocab="http://schema.org/" prefix="farm: http://farm.schema.org/" >Default vocabulary prefix: 'farm:'</p>
+<p>
+<span property="schema:softwareVersion">farm data extension - version 0.1</span>
+</p>
+<hr/>
+<h2>Types</h2>
+
+<div typeof="rdfs:Class" resource="http://schema.org/Animal">
+  <span class="h" property="rdfs:label">farm:Animal</span>
+  <span property="rdfs:comment">An Animal is a domesticated animal.</span>
+  <span> Subclass of:
+    <a property="rdfs:subClassOf" href="http://schema.org/Thing">schema:Thing</a>
+  </span>
+</div>
+
+
+<div typeof="rdfs:Class" resource="http://schema.org/FarmEntity">
+  <span class="h" property="rdfs:label">FarmEntity</span>
+  <span property="rdfs:comment">The most generic type of entity related to farm data.</span>
+   <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Thing">Thing</a></span>
+   <span>Source:  <a property="dc:source" href="http://www.farmdatastandards.org.nz/">farmdatastandards.org.nz/</a>
+   </span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/FarmIntangible">
+  <span class="h" property="rdfs:label">FarmIntangible</span>
+  <span property="rdfs:comment">A utility class that serves as the umbrella for a number of &#39;intangible&#39; things in the farm space.</span>
+   <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/FarmEntity">FarmEntity</a></span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/FarmEnumeration">
+  <span class="h" property="rdfs:label">FarmEnumeration</span>
+  <span property="rdfs:comment">Enumerations related to farm data.</span>
+   <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/FarmIntangible">FarmIntangible</a></span>
+   <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Enumeration">Enumeration</a></span>
+</div>
+
+
+<h2>Properties</h2>
+
+    <div typeof="rdf:Property" resource="http://schema.org/birthLocation">
+      <span class="h" property="rdfs:label">birthLocation</span>
+      <span property="rdfs:comment">Location identifier that distinguishes the location at which the animal was born, using a URN-based identification string that contains the namespace and unique identifier within that namespace. An example for the MPI Farms Online system might be “nzl:farm:farmsonline:WK-3284-0046”.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Animal">Animal</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Location">Location</a></span>
+    </div>
+
+    <div typeof="rdf:Property" resource="http://schema.org/birthDate">
+      <span class="h" property="rdfs:label">birthDate</span>
+      <span property="rdfs:comment">Date of birth.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Animal">Animal</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Date">Date</a></span>
+    </div>
+
+    <div typeof="rdf:Property" resource="http://schema.org/ParentClass">
+      <span class="h" property="rdfs:label">parentClass</span>
+      <span property="rdfs:comment">The class of parent.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Animal">Animal</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/ParentClass">ParentClass</a></span>
+    </div>
+
+
+    <div typeof="rdfs:Class" resource="http://schema.org/ParentClass">
+      <span class="h" property="rdfs:label">ParentClass</span>
+      <span property="rdfs:comment">Classes of animal parentage claimed. Enumerated type.</span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/FarmEnumeration">FarmEnumeration</a></span>
+       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Enumeration">Enumeration</a></span>
+       <span>Source:  <a property="dc:source" href="http://www.farmdatastandards.org.nz/wp-content/uploads/2014/09/DINDS-Animal-Standard-V1.0.1-2014-11-20.pdf">DINDS-Animal-Standard-V1</a></span>
+     </div>
+
+    <div typeof="http://schema.org/ParentClass" resource="http://schema.org/Dam">
+      <span class="h" property="rdfs:label">Dam</span>
+      <span property="rdfs:comment">Dam (natural dam) parentage.</span>
+    </div>
+
+    <div typeof="http://schema.org/ParentClass" resource="http://schema.org/ETRDam">
+      <span class="h" property="rdfs:label">ETRDam</span>
+      <span property="rdfs:comment">ET Recipient Dam parentage.</span>
+    </div>
+
+    <div typeof="http://schema.org/ParentClass" resource="http://schema.org/ETDDam">
+      <span class="h" property="rdfs:label">ETDDam</span>
+      <span property="rdfs:comment">ET Donor (Genetic) Dam parentage.</span>
+    </div>
+
+    <div typeof="http://schema.org/ParentClass" resource="http://schema.org/RearingDam">
+      <span class="h" property="rdfs:label">RearingDam</span>
+      <span property="rdfs:comment">Rearing Dam (reared, but did not give birth to the progeny) parentage.</span>
+    </div>
+
+    <div typeof="http://schema.org/ParentClass" resource="http://schema.org/Sire">
+      <span class="h" property="rdfs:label">Sire</span>
+      <span property="rdfs:comment">Sire (multiple sire records may be recorded, each with its own DNA probability if DNA testing indicates multiple matches) parentage.</span>
+    </div>
+
+    <div typeof="http://schema.org/ParentClass" resource="http://schema.org/ExcludedSire">
+      <span class="h" property="rdfs:label">ExcludedSire</span>
+      <span property="rdfs:comment">Excluded Sire (unable to confirm the sire, but definitely not this animal) parentage.</span>
+    </div>
+
+
+</body>
+</html>
