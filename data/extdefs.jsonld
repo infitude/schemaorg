@@ -9,7 +9,7 @@
 			"schema:name": "Farm Extension",
 			"schema:disambiguatingDescription": "terms used for farm definitions.",
 		    "schema:softwareVersion": "1.0",
-			"rdfs:comment": "The farm extension contains terms primarily designed to support the implementation of farm. It includes terms such as [[Valuation]]. They are New Zealand specific and not currently advocated for widespread use across the web."
+			"rdfs:comment": "The farm extension contains terms primarily designed to support the implementation of farm. It includes terms such as [[Animal]]. They are New Zealand specific and not currently advocated for widespread use across the web."
 		},
 		{
 		    "@id": "http://realproperty.schema.org",
